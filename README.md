@@ -117,13 +117,23 @@ The project includes multiple layers of automated testing:
 | End-to-end testing | Playwright | Validate dashboard and offline functionality |
 | CI automation | GitHub Actions | Automatically execute tests on repository changes |
 
+
 ### Latest local test results
 
-- **24 tests passed**
+| Test category | Tests passed |
+|---|---:|
+| Unit tests | 13 |
+| API tests | 8 |
+| Playwright E2E tests | 4 |
+| **Total** | **25** |
+
+- **25 automated tests passed locally**
 - **100% statement coverage** for `api.py`
 - **100% statement coverage** for `health_logic.py`
+- GitHub Actions CI pipeline successfully executed for the latest commit.
 
 Coverage figures apply only to these two Python modules, not the entire application.
+
 
 ### Generate test and coverage reports
 
