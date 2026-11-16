@@ -1,0 +1,9 @@
+{
+  "name": "TranzHealthMate",
+  "short_name": "HealthMate",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f6",
+  "theme_color": "#0f766e",
+  "description": "Offline-first educational wellness companion"
+}

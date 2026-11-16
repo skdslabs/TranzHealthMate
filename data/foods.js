@@ -1,0 +1,20 @@
+/* Educational sample food dataset. Nutrient presence is indicative, not a quantified nutrient analysis. */
+const FOODS = [
+{name:"Masoor dal (red lentils)",nutrients:["Protein","Iron","Fibre","Magnesium","Potassium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Asia"],note:"A versatile source of plant protein and fibre."},
+{name:"Chickpeas / chana",nutrients:["Protein","Iron","Fibre","Zinc","Potassium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Europe","Asia"],note:"Use in chana masala, salads, hummus or roasted snacks."},
+{name:"Paneer",nutrients:["Protein","Calcium","Vitamin B12"],diets:["Vegetarian","Eggetarian"],regions:["India"],note:"Dairy protein; choose portions that suit your overall diet."},
+{name:"Curd / plain yoghurt",nutrients:["Protein","Calcium","Vitamin B12"],diets:["Vegetarian","Eggetarian"],regions:["India","Europe"],note:"A useful dairy option; unsweetened varieties limit added sugar."},
+{name:"Tofu (calcium-set)",nutrients:["Protein","Calcium","Iron","Zinc"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["Asia","International"],note:"Plant protein; calcium content depends on the coagulant used."},
+{name:"Soybeans / edamame",nutrients:["Protein","Iron","Fibre","Magnesium","Potassium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["Asia","International"],note:"Protein-rich legumes with fibre and minerals."},
+{name:"Spinach / palak",nutrients:["Iron","Vitamin A","Vitamin C","Magnesium","Fibre"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Europe","Asia"],note:"Provides folate and plant iron; absorption of its iron is limited."},
+{name:"Pumpkin seeds",nutrients:["Protein","Iron","Magnesium","Zinc","Omega-3"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["International"],note:"Energy-dense seeds; omega-3 is mostly ALA in plant seeds."},
+{name:"Oats",nutrients:["Protein","Fibre","Magnesium","Zinc"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["Europe","International"],note:"Whole grain containing beta-glucan fibre."},
+{name:"Eggs",nutrients:["Protein","Vitamin B12","Vitamin D","Vitamin A"],diets:["Eggetarian","Non-vegetarian"],regions:["India","Europe","Asia","International"],note:"A source of complete protein and several micronutrients."},
+{name:"Salmon / oily fish",nutrients:["Protein","Vitamin D","Vitamin B12","Omega-3"],diets:["Pescatarian","Non-vegetarian"],regions:["Europe","International"],note:"Oily fish provides EPA and DHA omega-3 fats."},
+{name:"Milk (fortified where available)",nutrients:["Protein","Calcium","Vitamin B12","Vitamin D"],diets:["Vegetarian","Eggetarian"],regions:["India","Europe","International"],note:"Check labels; vitamin D fortification varies by country."},
+{name:"Guava",nutrients:["Vitamin C","Fibre","Potassium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Asia"],note:"A vitamin C-rich fruit commonly available in India."},
+{name:"Orange",nutrients:["Vitamin C","Fibre","Potassium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["Europe","International"],note:"Vitamin C helps the body absorb non-haem iron from plant foods."},
+{name:"Almonds",nutrients:["Vitamin E","Magnesium","Fibre","Protein"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Europe","International"],note:"Provides vitamin E and unsaturated fats; contains tree-nut allergen."},
+{name:"Banana",nutrients:["Potassium","Fibre","Vitamin B6"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Asia","International"],note:"Convenient fruit containing potassium and carbohydrate."},
+{name:"Flaxseed",nutrients:["Omega-3","Fibre","Magnesium"],diets:["Vegetarian","Vegan","Eggetarian","Non-vegetarian","Pescatarian"],regions:["India","Europe","International"],note:"Provides plant-based ALA omega-3; ground flaxseed is easier to use."}
+];

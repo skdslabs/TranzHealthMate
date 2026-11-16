@@ -1,0 +1,34 @@
+name: TranzHealthMate QA
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  unit-and-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-dev.txt
+      - run: pytest tests/unit --html=reports/unit-report.html --self-contained-html
+      - run: |
+          uvicorn api:app --host 127.0.0.1 --port 8000 &
+          sleep 2
+          pytest tests/api --html=reports/api-report.html --self-contained-html
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pytest-reports
+          path: reports/
+  browser-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-dev.txt
+      - run: playwright install --with-deps chromium
+      - run: pytest tests/e2e

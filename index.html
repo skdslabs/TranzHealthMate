@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <title>TranzHealthMate — Daily Wellness</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">✚</div><div><strong>TranzHealthMate</strong><small>Everyday wellness, made clear</small></div></div>
+      <nav aria-label="Main navigation">
+        <button class="nav-link active" data-view="dashboard">▦ <span>Dashboard</span></button>
+        <button class="nav-link" data-view="profile">◉ <span>My profile</span></button>
+        <button class="nav-link" data-view="nutrition">◈ <span>Food & nutrition</span></button>
+        <button class="nav-link" data-view="habits">✓ <span>Daily habits</span></button>
+        <button class="nav-link" data-view="assistant">✧ <span>Wellness guide</span></button>
+        <button class="nav-link" data-view="privacy">⚙ <span>Settings & privacy</span></button>
+      </nav>
+      <div class="sidebar-note"><span class="status-dot"></span> Offline-ready <small>Your information stays on this device.</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow" id="today-label">YOUR DAILY CHECK-IN</p><h1 id="page-title">Your wellness overview</h1></div>
+        <div class="top-actions"><span class="date-chip" id="date-chip"></span><button id="theme-toggle" class="icon-button" aria-label="Toggle dark mode">◐</button></div>
+      </header>
+
+      <section class="view active" id="view-dashboard">
+        <div class="welcome-card">
+          <div><span class="pill">A little progress, every day</span><h2 id="greeting">Build habits that support you.</h2><p id="welcome-subtitle">Your personal wellness snapshot, based on the details you choose to share.</p></div>
+          <div class="thought"><span class="thought-label">THOUGHT FOR TODAY</span><p id="thought-text">Small steps, repeated consistently, can create meaningful change.</p><button class="text-button" id="new-thought">Show another thought ↗</button></div>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>Today's snapshot</h2></div><span class="muted" id="profile-status">Add profile details for more relevant guidance</span></div>
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-icon teal">♧</div><span class="metric-label">BMI estimate</span><strong id="bmi-value">—</strong><small id="bmi-note">Add height and weight</small></article>
+          <article class="metric-card"><div class="metric-icon blue">⌁</div><span class="metric-label">Daily protein guide</span><strong id="protein-value">—</strong><small>General adult estimate</small></article>
+          <article class="metric-card"><div class="metric-icon yellow">◒</div><span class="metric-label">Water logged</span><strong id="water-value">0 ml</strong><small id="water-goal">Set a personal reminder</small></article>
+          <article class="metric-card"><div class="metric-icon coral">☾</div><span class="metric-label">Sleep logged</span><strong id="sleep-value">0 h</strong><small>Track your recent routine</small></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel"><div class="panel-heading"><div><p class="eyebrow">YOUR ROUTINE</p><h3>Daily wellness checklist</h3></div><span class="counter" id="habit-count">0 / 5</span></div><div id="habit-list" class="habit-list"></div></article>
+          <article class="panel"><div class="panel-heading"><div><p class="eyebrow">PERSONAL GUIDANCE</p><h3>Today's recommendations</h3></div><span class="pill soft">General wellness</span></div><div id="recommendations" class="recommendations"></div></article>
+        </div>
+        <p class="disclaimer">TranzHealthMate provides general educational wellness information. It does not diagnose, treat, or prevent disease and is not a substitute for professional medical advice.</p>
+      </section>
+
+      <section class="view" id="view-profile">
+        <div class="section-heading"><div><p class="eyebrow">YOUR DETAILS</p><h2>Personal wellness profile</h2><p class="muted">Complete only what you are comfortable sharing. Missing fields are okay.</p></div></div>
+        <form id="profile-form" class="panel form-grid">
+          <label>Age (years)<input type="number" min="1" max="120" id="age" placeholder="e.g. 32"></label>
+          <label>Height (cm)<input type="number" min="50" max="250" id="height" placeholder="e.g. 170"></label>
+          <label>Weight (kg)<input type="number" min="10" max="500" id="weight" placeholder="e.g. 68"></label>
+          <label>Gender <select id="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+          <label>Country / region<select id="country"><option value="India">India</option><option value="Europe">Europe</option><option value="Asia">Asia (other)</option><option value="International">International / other</option></select></label>
+          <label>Dietary preference<select id="diet"><option value="Vegetarian">Vegetarian</option><option value="Vegan">Vegan</option><option value="Eggetarian">Eggetarian</option><option value="Non-vegetarian">Non-vegetarian</option><option value="Pescatarian">Pescatarian</option></select></label>
+          <label>Activity level<select id="activity"><option value="Sedentary">Sedentary</option><option value="Lightly active">Lightly active</option><option value="Moderately active">Moderately active</option><option value="Very active">Very active</option></select></label>
+          <label>Wellness goal<select id="goal"><option value="Build consistent habits">Build consistent habits</option><option value="Improve fitness">Improve fitness</option><option value="Eat more balanced meals">Eat more balanced meals</option><option value="Improve sleep">Improve sleep</option></select></label>
+          <label class="full">Food allergies / foods to avoid<input id="allergies" placeholder="e.g. peanuts, shellfish (optional)"></label>
+          <div class="form-actions full"><p class="muted">Your profile is stored locally in this browser.</p><button class="primary-button" type="submit">Save profile</button></div>
+        </form>
+      </section>
+
+      <section class="view" id="view-nutrition">
+        <div class="section-heading"><div><p class="eyebrow">FOOD EXPLORER</p><h2>Everyday foods, useful nutrients</h2><p class="muted">Explore food sources. Nutrient amounts vary by variety, preparation and serving size.</p></div></div>
+        <div class="toolbar"><input id="food-search" placeholder="Search foods or nutrients…" aria-label="Search foods or nutrients"><select id="nutrient-filter" aria-label="Filter by nutrient"><option value="">All nutrients</option><option>Protein</option><option>Iron</option><option>Calcium</option><option>Vitamin B12</option><option>Vitamin C</option><option>Vitamin D</option><option>Magnesium</option><option>Potassium</option><option>Omega-3</option><option>Fibre</option><option>Zinc</option></select></div>
+        <div id="food-grid" class="food-grid"></div>
+      </section>
+
+      <section class="view" id="view-habits">
+        <div class="section-heading"><div><p class="eyebrow">SMALL DAILY ACTIONS</p><h2>Track your wellness habits</h2><p class="muted">Use these trackers as gentle prompts, not performance targets.</p></div></div>
+        <div class="tracker-grid">
+          <article class="panel tracker"><div class="metric-icon blue">◒</div><h3>Water intake</h3><strong class="tracker-number" id="water-large">0 ml</strong><p class="muted">Log a glass or bottle. Needs vary with climate, activity and health.</p><div class="button-row"><button class="secondary-button" data-water="150">+150 ml</button><button class="secondary-button" data-water="250">+250 ml</button><button class="secondary-button" data-water="500">+500 ml</button></div></article>
+          <article class="panel tracker"><div class="metric-icon coral">☾</div><h3>Sleep last night</h3><strong class="tracker-number" id="sleep-large">0 h</strong><p class="muted">Log your approximate sleep duration.</p><div class="button-row"><button class="secondary-button" data-sleep="-1">−1 hour</button><button class="secondary-button" data-sleep="1">+1 hour</button></div></article>
+          <article class="panel tracker"><div class="metric-icon teal">⌁</div><h3>Movement</h3><strong class="tracker-number" id="steps-large">0 steps</strong><p class="muted">Manually record steps from your phone or watch.</p><div class="button-row"><button class="secondary-button" data-steps="1000">+1,000</button><button class="secondary-button" data-steps="2500">+2,500</button><button class="secondary-button" data-steps="5000">+5,000</button></div></article>
+        </div>
+        <div class="panel habit-history"><div class="panel-heading"><div><p class="eyebrow">TODAY</p><h3>Habit check-in</h3></div><button class="text-button" id="reset-habits">Reset today's checklist</button></div><div id="habit-list-secondary" class="habit-list"></div></div>
+      </section>
+
+      <section class="view" id="view-assistant">
+        <div class="section-heading"><div><p class="eyebrow">OFFLINE KNOWLEDGE BASE</p><h2>Ask the wellness guide</h2><p class="muted">Answers are drawn from a small curated educational knowledge base, not generated medical advice.</p></div></div>
+        <div class="assistant-layout"><article class="panel assistant-panel"><div id="chat-log" class="chat-log"><div class="chat-bubble bot">Hello! Ask me about protein, hydration, sleep, fibre, or balanced eating. I work offline using the included knowledge base.</div></div><form id="chat-form" class="chat-form"><input id="chat-input" placeholder="e.g. What are vegetarian sources of protein?" autocomplete="off"><button class="primary-button">Ask</button></form></article><aside class="panel prompt-panel"><h3>Try asking</h3><button class="suggestion">What are plant-based protein sources?</button><button class="suggestion">Why is fibre important?</button><button class="suggestion">How can I improve my sleep routine?</button><button class="suggestion">Which foods contain iron?</button></aside></div>
+      </section>
+
+      <section class="view" id="view-privacy">
+        <div class="section-heading"><div><p class="eyebrow">YOUR DATA, YOUR CHOICE</p><h2>Settings & privacy</h2></div></div>
+        <div class="panel privacy-panel"><h3>Local data controls</h3><p class="muted">This MVP stores your profile and daily tracker values in this browser's local storage. No account or remote server is used by the frontend.</p><div class="privacy-row"><div><strong>Export wellness data</strong><small>Download a JSON copy of your local profile and tracker data.</small></div><button class="secondary-button" id="export-data">Export data</button></div><div class="privacy-row"><div><strong>Delete all local data</strong><small>This permanently clears this app's saved profile, preferences and trackers in this browser.</small></div><button class="danger-button" id="delete-data">Delete my data</button></div><div class="privacy-row"><div><strong>Theme</strong><small>Switch between light and dark appearance.</small></div><button class="secondary-button" id="theme-toggle-settings">Toggle theme</button></div></div>
+        <p class="disclaimer">Privacy note: browser storage is local to this browser profile, but it is not encrypted medical-record storage. Avoid entering highly sensitive medical information. Clearing browser data may also remove saved information.</p>
+      </section>
+      <footer>TranzHealthMate <span>•</span> Educational wellness companion <span>•</span> Offline-first MVP</footer>
+    </main>
+  </div>
+  <script src="data/foods.js"></script>
+  <script src="data/thoughts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
