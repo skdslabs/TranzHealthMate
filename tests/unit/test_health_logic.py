@@ -21,3 +21,14 @@ def test_protein_missing_weight():
 
 def test_profile_completeness_partial():
     assert profile_completeness({"age": 30, "diet": "Vegan"}) == 33
+
+def test_protein_rejects_weight_below_range():
+    import pytest
+    with pytest.raises(ValueError):
+        protein_reference(9)
+
+
+def test_protein_rejects_weight_above_range():
+    import pytest
+    with pytest.raises(ValueError):
+        protein_reference(501)
