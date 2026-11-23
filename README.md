@@ -130,7 +130,7 @@ The project includes multiple layers of automated testing:
 - **25 automated tests passed locally**
 - **100% statement coverage** for `api.py`
 - **100% statement coverage** for `health_logic.py`
-- GitHub Actions CI pipeline successfully executed for the latest commit.
+- **GitHub Actions CI successfully executed for the Playwright test improvements**
 
 Coverage figures apply only to these two Python modules, not the entire application.
 
