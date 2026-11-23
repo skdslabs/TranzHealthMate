@@ -3,7 +3,17 @@
 
 [![TranzHealthMate QA](https://github.com/skdslabs/TranzHealthMate/actions/workflows/qa.yml/badge.svg)](https://github.com/skdslabs/TranzHealthMate/actions/workflows/qa.yml)
 
-**AI-Powered Personal Health & Wellness Assistant** — an offline-first educational wellness companion and SDET portfolio project.
+**Personal Health & Wellness Assistant** — an offline-first educational wellness companion and SDET portfolio project.
+
+## 🚀 Live Demo
+
+**[Open TranzHealthMate — Try the Live Application](https://tranzhealthmate.onrender.com/)**
+
+Explore the wellness dashboard, personal profile, food explorer, daily habit trackers, offline wellness guide and privacy controls.
+
+- **Hosting:** Render
+- **Project type:** Independent Personal Project
+- **Data privacy:** Profile and tracker data are stored locally in each visitor's browser. No account or remote database is used by the frontend.
 
 > This project is for general education and habit tracking. It is not a medical device and does not diagnose, treat, or prevent disease.
 
